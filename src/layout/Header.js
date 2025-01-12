@@ -52,27 +52,8 @@ function Header() {
             </button>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-[1.1rem]">
-              <IoSearchOutline className="text-xl" />
-            </button>
-            <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-1xl">
-              <FaRegHeart className="fill-black" />
-            </button>
-            <Link
-              to="/cart"
-              className="text-sm font-semibold leading-6 text-gray-900 relative"
-            >
-              <button className="relative mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 ">
-                <ShoppingCartIcon className="h-5 w-5 inline-block" />
-                {cartItems.length > 0 && (
-                  <span className="absolute -top-1 -right-2 text-black rounded-full px-1 text-xs">
-                    {cartItems.length}
-                  </span>
-                )}
-              </button>
-            </Link>
-            <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-[1.1rem]">
-              <BiUser className="stroke-1.5" />
+            <button className="px-5 py-3 bg-[#1010eb] mx-1.5 rounded-full flex justify-center items-center text-white hover:bg-[#0e0ec4] border-0 ">
+              Request call back
             </button>
           </div>
         </nav>

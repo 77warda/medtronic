@@ -1,164 +1,127 @@
 import { useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
-import {
-  FaWhatsapp,
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaWhatsapp, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaArrowUpLong } from "react-icons/fa6";
 
 const navigation = {
-  "About Us": [
-    { name: "Marketing", href: "#" },
-    { name: "Analytics", href: "#" },
-    { name: "Commerce", href: "#" },
-    { name: "Insights", href: "#" },
-  ],
   "Get Help": [
-    { name: "Pricing", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "API Status", href: "#" },
+    { name: "eShop", href: "#" },
+    { name: "WeCare", href: "#" },
+    { name: "Health Care Professional", href: "#" },
   ],
-  "Reach Us": [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Partners", href: "#" },
-  ],
+
   Policies: [
-    { name: "Claim", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
+    { name: "Terms of Sale", href: "#" },
+    { name: "Privacy Statement", href: "#" },
+    { name: "Terms of Use", href: "#" },
+    { name: "Cookie Policy", href: "#" },
+    { name: "Cookie preferences", href: "#" },
   ],
-  "Join the Pastels and Pop Tribe": [
-    // {
-    //   name: "Facebook",
-    //   href: "#",
-    //   icon: (props) => (
-    //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-    //       {/* Facebook SVG path */}
-    //     </svg>
-    //   ),
-    // },
-    // other social links...
-    {
-      description:
-        "Get first dibs on new styles, promotions, events and other magical updates right in your inbox.",
-      emailPlaceholder: "you@example.com",
-      buttonText: "SignUp",
-    },
+  "Social Media": [
+    { name: "Instagram", href: "#", icon: FaInstagram },
+    { name: "Facebook", href: "#", icon: FaFacebookF },
+    { name: "YouTube", href: "#", icon: FaYoutube },
   ],
 };
 
 function Footer() {
-  const [inputValue, setInputValue] = useState("");
-
-  // Handle input change
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
   return (
-    <footer className="border-t border-gray-300 lg:text-left">
+    <footer className="max-w-[1270px] mx-auto relative">
       <div className="py-5 px-1 lg:px-10 md:px-10">
-        <div className="mx-6 pb-5 pt-3">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {Object.entries(navigation).map(([section, links]) => (
-              <div key={section}>
-                <h5 className="text-sm uppercase tracking-widest mb-4 font-semibold text-dark">
-                  {section}
-                </h5>
-                <ul className="space-y-2">
-                  {links.map((link) => (
-                    <li key={link.name}>
-                      {link.icon ? (
-                        <a
-                          href={link.href}
-                          className="text-dark text-sm flex items-center space-x-2"
-                        >
-                          <link.icon className="h-5 w-5" />
-                          <span>{link.name}</span>
-                        </a>
-                      ) : (
-                        <a
-                          href={link.href}
-                          className="text-sm tracking-wider font-normal text-dark"
-                        >
-                          {link.name}
-                        </a>
-                      )}
-                    </li>
-                  ))}
-                  {section === "Join the Pastels and Pop Tribe" && (
-                    <div className="">
-                      <p className="text-sm tracking-wider font-normal text-dark">
-                        Get first dibs on new styles, promotions, events and
-                        other magical updates right in your inbox.
-                      </p>
-                      <div className="mt-5 relative md:mb-6">
-                        <input
-                          type="email"
-                          name="email"
-                          id="email"
-                          value={inputValue}
-                          onChange={handleInputChange}
-                          className="text-sm bg-transparent block w-full border-b-2 border-black py-1 px-3 text-dark focus:border-dark focus:outline-none placeholder:text-black sm:text-sm sm:leading-6 placeholder:font-normal placeholder:tracking-wider placeholder:text-sm"
-                          placeholder="Enter your Email"
-                        />
-
-                        <button className="font-semibold text-sm text-dark absolute right-0 top-[0.08rem] px-2 py-2">
-                          {inputValue ? (
-                            "Subscribe"
-                          ) : (
-                            <TfiEmail className="text-xl" />
-                          )}
-                        </button>
-                      </div>
-                      <div className="mt-5 lg:mt-2 md:mt-2 flex space-x-4">
-                        {" "}
-                        {/* Flexbox container with spacing */}
-                        <Link
-                          to="/facebook"
-                          className="text-black hover:text-blue-600"
-                        >
-                          <FaFacebookF size={26} />
-                        </Link>
-                        <Link
-                          to="/twitter"
-                          className="text-black hover:text-blue-400"
-                        >
-                          <FaTwitter size={26} />
-                        </Link>
-                        <Link
-                          to="/instagram"
-                          className="text-black hover:text-pink-500"
-                        >
-                          <FaInstagram size={26} />
-                        </Link>
-                      </div>
-                    </div>
-                  )}
-                </ul>
-              </div>
+        <div className="flex items-center justify-between py-7">
+          <div>
+            <h3 className="font-semibold text-2xl">Medtronic</h3>
+          </div>
+          <div className="flex items-center justify-between">
+            {navigation["Get Help"].map((item, index) => (
+              <p key={index} className="flex items-center">
+                <a
+                  href={item.href}
+                  className="text-lg font-semibold text-[#1010eb] hover:opacity-110"
+                >
+                  {item.name}
+                </a>
+                {index < navigation["Get Help"].length - 1 && (
+                  <span className="text-[#1010eb] mx-5">
+                    <div className="h-3 w-[1px] bg-[#1010eb]"></div>
+                  </span>
+                )}
+              </p>
+            ))}
+          </div>
+          <div className="flex items-center space-x-4">
+            {navigation["Social Media"].map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                className={`text-2xl ${
+                  item.name === "Instagram"
+                    ? "text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+                    : ""
+                }`}
+                style={{
+                  color:
+                    item.name === "Facebook"
+                      ? "#1877F2"
+                      : item.name === "YouTube"
+                      ? "#FF0000"
+                      : "inherit",
+                }}
+                aria-label={item.name}
+              >
+                <item.icon />
+              </a>
             ))}
           </div>
         </div>
-      </div>
-      <div className="fixed right-12 bottom-12">
-        <a
-          href="https://wa.me/923223445065"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-green-500"
-        >
-          <p className="text-white rounded-full h-20 w-20 flex items-center justify-center bg-green-500">
-            <FaWhatsapp size={55} />
+        <div className="border-t border-gray-300">
+          <p className="my-3 text-gray-500 text-base text-center">
+            For 24/7 diabetes technical product support please contact 01923
+            205167
           </p>
-        </a>
+          <div className="my-4 mx-auto flex items-center justify-center">
+            {navigation["Policies"].map((item, index) => (
+              <p key={index} className="flex items-center">
+                <a
+                  href={item.href}
+                  className="text-center text-sm font-semibold text-gray-800 hover:opacity-110"
+                >
+                  {item.name}
+                </a>
+                {index < navigation["Policies"].length - 1 && (
+                  <span className="text-gray-800 mx-5">
+                    <div className="h-3 w-[1px] bg-black"></div>
+                  </span>
+                )}
+              </p>
+            ))}
+          </div>
+          <p className="my-3 text-gray-500 text-sm text-center">
+            See the device manuals for detailed information regarding the
+            instructions for use, indications, contraindications, warnings,
+            precautions, and potential adverse events. For further information,
+            contact your local Medtronic representative. © 2024 Medtronic. All
+            rights reserved Medtronic. Medtronic logo and Further, Together are
+            trademarks of Medtronic.
+          </p>
+          <p className="font-semibold my-3 text-gray-800 text-sm text-center">
+            Building 9, Croxley Park, Watford, Hertfordshire, WD18 8WW.
+          </p>
+        </div>
       </div>
+
+      {/* Back to Top Button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="absolute bottom-2 right-5 text-[#1010eb] px-4 py-2 flex items-center justify-center"
+        aria-label="Back to Top"
+      >
+        <span className="text-sm font-semibold">Back to Top </span>
+        <FaArrowUpLong className="border-2 border-[#1010eb] ml-1 text-[#1010eb] hover:bg-[#1010eb] hover:text-white rounded-full h-9 w-9 p-2 flex-items-center justify-center" />
+      </button>
     </footer>
   );
 }
