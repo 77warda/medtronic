@@ -161,7 +161,7 @@ const TechnicalSkills = () => {
   };
   return (
     <>
-      <section className="py-8 px-4 lg:px-20">
+      <section className="py-8 px-4 lg:px-28">
         <div className="py-7 border-b border-gray-200 group">
           <div className="py-2 ">
             {/* Accordion Header */}
@@ -203,10 +203,10 @@ const TechnicalSkills = () => {
                       index % 2 !== 0 ? "bg-gray-50 " : ""
                     }`}
                   >
-                    <h2 className="pr-5 col-span-2 text-lg font-light text-gray-800 mb-2">
+                    <h2 className="pr-5 col-span-10 md:col-span-2 lg:col-span-2 text-lg font-light text-gray-800 mb-2">
                       {spec.title}
                     </h2>
-                    <p className="col-span-8 text-gray-600">
+                    <p className="col-span-10 md:col-span-8 lg:col-span-8 text-gray-600">
                       {spec.description}
                     </p>
                   </div>
@@ -223,10 +223,10 @@ const TechnicalSkills = () => {
                       index % 2 !== 0 ? "bg-gray-50 " : ""
                     }`}
                   >
-                    <h2 className="pr-5 col-span-2 text-lg font-light text-gray-800 mb-2">
+                    <h2 className="pr-5 col-span-10 md:col-span-2 lg:col-span-2 text-lg font-light text-gray-800 mb-2">
                       {spec.title}
                     </h2>
-                    <p className="col-span-8 text-gray-600">
+                    <p className="col-span-10 md:col-span-8 lg:col-span-8 text-gray-600">
                       {spec.description}
                     </p>
                   </div>

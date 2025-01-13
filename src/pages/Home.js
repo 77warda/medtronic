@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 // import img from "../assets/La_Dolce.webp";
@@ -12,7 +12,6 @@ import playstore from "../assets/med-images/playstore.png";
 import apple from "../assets/med-images/Apple-Logosu.png";
 import first from "../assets/med-images/1.webp";
 import { IoCheckmarkOutline } from "react-icons/io5";
-import { FaPlus, FaMinus } from "react-icons/fa6";
 import Faqs from "../components/Faqs";
 import TechnicalSkills from "../components/TechnicalSkills";
 import References from "../components/References";
@@ -20,19 +19,17 @@ import Tabs from "../components/Tabs";
 import DreaMed from "../components/DreaMed";
 import SomeDoubt from "../components/SomeDoubt";
 import Hero from "../components/Hero";
+import Graph from "../components/Graph";
+import PictureScrolling from "../components/PictureScrolling";
 
 const Home = () => {
-  const [open, setOpen] = useState(false);
-  const toggleAccordion = () => {
-    setOpen(!open);
-  };
   return (
     <>
       <Header />
       {/* hero section  */}
       <Hero />
       {/* time in range  */}
-      <section className="my-32 bg-white flex flex-col items-center py-8 px-4 lg:px-16">
+      <section className="bg-white flex flex-col items-center py-8 px-4 lg:px-28">
         <div className="max-w-7xl w-full grid lg:grid-cols-12 gap-8 items-center">
           {/* Left Image Section */}
           <div className="lg:col-span-7 md:col-span-7 col-span-12">
@@ -71,7 +68,7 @@ const Home = () => {
         </div>
       </section>
       {/* Advance insulin pump system  */}
-      <section className="max-w-6xl py-8 px-4 lg:px-16">
+      <section className="max-w-6xl py-8 px-4 lg:px-28">
         <div className="">
           <div className="flex items-center">
             <div className="h-2 w-2 rounded-full bg-red-600"></div>
@@ -79,10 +76,10 @@ const Home = () => {
               SmartGuard™ technology
             </p>
           </div>
-          <h2 className="text-5xl font-normal text-gray-900 mt-5">
+          <p className="text-4xl font-normal text-gray-900 mt-5 leading-[3.5rem]">
             Our most advanced insulin pump system with SmartGuard{" "}
             <sup className="text-sm align-super font-bold">TM</sup> technology
-          </h2>
+          </p>
           <p className="max-w-4xl text-gray-700 mt-7 text-xl font-normal">
             SmartGuard <sup>TM</sup> technology continuously anticipates your
             insulin needs, adjusts insulin delivery, and corrects highs
@@ -95,15 +92,17 @@ const Home = () => {
         </div>
       </section>
       {/* Graph section  */}
+      <Graph />
       {/* picture scrolling section  */}
+      <PictureScrolling />
       {/* Minimed Action (dark blue section ) */}
       <section className="h-[80vh] flex items-center justify-center bg-[#1010eb]">
-        <div className="mx-auto text-center py-8 px-4 lg:px-16 text-white">
-          <h3 className="my-5 text-6xl font-light ">
+        <div className="mx-auto text-left md:text-center lg:text-center py-8 px-4 lg:px-16 text-white">
+          <h3 className="my-5 text-5xl md:text-6xl lg:text-6xl font-light leading-[3.5rem] md:leading-[4.5rem] lg:leading-[4.5rem]">
             {" "}
             Want to see the MiniMed™ 780G in action?
           </h3>
-          <p className="my-10 text-3xl font-light ">
+          <p className="my-10 lg:text-3xl md:text-3xl text-xl  font-light ">
             {" "}
             Learn how the MiniMed™ 780G can fit into your life everyday.
           </p>
@@ -193,7 +192,7 @@ const Home = () => {
         </div>
       </section>
       {/* Minimed Quotes (sky blue section ) */}
-      <section className="bg-[#e9faff] py-32 flex flex-col items-center py-8 px-4 lg:px-16">
+      <section className="bg-[#e9faff] py-32 flex flex-col items-center py-8 px-4 lg:px-28">
         <div className="w-full grid lg:grid-cols-12 gap-8 items-center">
           {/* Left Image Section */}
           <div className="lg:w-3/4 md:w-3/4 w-100 lg:col-span-6 md:col-span-6 col-span-12">
@@ -210,15 +209,15 @@ const Home = () => {
           {/* Right Text Section */}
           <div className="lg:col-span-6 md:col-span-6 col-span-12">
             <div className="md:w-10/12 lg:w-10/12 w-100 relative px-6 py-10">
-              <div className="absolute top-2 left-4 text-7xl font-semibold text-[#1010eb]">
+              <div className="absolute top-2 left-4 text-5xl md:text-7xl lg:text-7xl font-semibold text-[#1010eb]">
                 <i>"</i>
               </div>
-              <div className="absolute bottom-2 right-4 text-7xl font-semibold text-[#1010eb]">
+              <div className="absolute bottom-2 right-4 text-5xl md:text-7xl lg:text-7xl font-semibold text-[#1010eb]">
                 <i>"</i>
               </div>
 
               <div className="mt-10">
-                <p className="text-4xl font-normal text-[#1010eb] leading-[3.5rem]">
+                <p className="text-2xl md:text-4xl lg:text-4xl font-normal text-[#1010eb] leading-[2.5rem] md:leading-[3.5rem] lg:leading-[3.5rem]">
                   I can just eat, maybe make a wrong calculation but it will fix
                   it by itself.
                 </p>
@@ -233,29 +232,10 @@ const Home = () => {
       {/* different tab view sections  */}
       <Tabs />
       {/* Minimed Quotes (sky blue section ) */}
-      <section className="bg-[#e9faff] py-32 flex flex-col items-center py-8 px-4 lg:px-16">
+      <section className="bg-[#e9faff] py-32 flex flex-col items-center py-8 px-4 lg:px-28">
         <div className="w-full grid lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-6 md:col-span-6 col-span-12">
-            <div className="md:w-11/12 lg:w-11/12 w-100 relative px-6 py-10">
-              <div className="absolute top-2 left-3 text-7xl font-semibold text-[#1010eb]">
-                <i>"</i>
-              </div>
-              <div className="absolute bottom-2 right-16 text-7xl font-semibold text-[#1010eb]">
-                <i>"</i>
-              </div>
-
-              <div className="mt-10">
-                <p className="text-4xl font-normal text-[#1010eb] leading-[3.5rem]">
-                  I finally sleep through the night! No more waking up because
-                  of sugar swings.
-                </p>
-                <p className=" mt-5 text-2xl text-dark text-xl">
-                  MiniMed™ 780G user
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="ml-auto lg:w-3/4 md:w-3/4 w-100 lg:col-span-6 md:col-span-6 col-span-12">
+          {/* Picture Section */}
+          <div className="ml-auto lg:w-3/4 md:w-3/4 w-100 lg:col-span-6 md:col-span-6 col-span-12 order-first lg:order-last">
             <div className="relative z-10 flex justify-start items-center">
               <div className="rounded-full p-2 bg-gradient-to-r from-green-400 via-blue-400 to-cyan-500">
                 <img
@@ -266,25 +246,48 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          {/* Text Section */}
+          <div className="lg:col-span-6 md:col-span-6 col-span-12 order-last lg:order-first">
+            <div className="md:w-11/12 lg:w-11/12 w-100 relative px-6 py-10">
+              <div className="absolute top-2 left-3 text-5xl md:text-7xl lg:text-7xl font-semibold text-[#1010eb]">
+                <i>"</i>
+              </div>
+              <div className="absolute bottom-2 right-16 text-5xl md:text-7xl lg:text-7xl font-semibold text-[#1010eb]">
+                <i>"</i>
+              </div>
+
+              <div className="mt-10">
+                <p className="text-2xl md:text-4xl lg:text-4xl font-normal text-[#1010eb] leading-[2.5rem] md:leading-[3.5rem] lg:leading-[3.5rem]">
+                  I finally sleep through the night! No more waking up because
+                  of sugar swings.
+                </p>
+                <p className="mt-5 text-2xl text-dark text-xl">
+                  MiniMed™ 780G user
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
       {/* innovation section  */}
-      <section className="bg-white py-32 bg-white flex flex-col items-center py-8 px-4 lg:px-16">
+      <section className="bg-white py-32 bg-white flex flex-col items-center py-8 px-4 lg:px-28">
         <div className="w-full grid lg:grid-cols-12 gap-8 items-center">
           {/* Left Image Section */}
-          <div className="w-100 lg:col-span-6 md:col-span-6 col-span-12">
+          <div className="w-full lg:col-span-6 md:col-span-6 col-span-12">
             <div className="relative ">
               <img
                 src={mobiles} // Replace this with your image source
                 alt="Devices"
-                className="w-full h-auto "
+                className="w-full h-auto mx-auto"
               />
             </div>
           </div>
           {/* Right Text Section */}
-          <div className="w-100 md:w-5/6 lg:w-5/6 lg:col-span-6 md:col-span-6 col-span-12">
+          <div className="w-full lg:w-5/6 lg:col-span-6 md:col-span-6 col-span-12">
             <div class="bg-white py-12 px-6">
-              <h1 class="text-5xl font-light text-dark mb-4">
+              <h1 class="text-[2.5rem] font-light text-dark mb-4 leading-[3.5rem]">
                 Transforming lives through innovation
               </h1>
 
@@ -295,7 +298,7 @@ const Home = () => {
 
               <div class="space-y-6">
                 <div class="flex items-start gap-4">
-                  <div class="w-10 h-10 flex justify-center items-center rounded-full border-2 border-[#1010eb] text-[#1010eb]">
+                  <div class="w-8 h-8 flex-shrink-0 flex justify-center items-center rounded-full border-2 border-[#1010eb] text-[#1010eb]">
                     <IoCheckmarkOutline className="text-2xl" />
                   </div>
                   <div class="text-left">
@@ -309,7 +312,7 @@ const Home = () => {
                 </div>
 
                 <div class="flex items-start gap-4">
-                  <div class="w-10 h-10 flex justify-center items-center rounded-full border-2 border-[#1010eb] text-[#1010eb]">
+                  <div class="w-8 h-8 flex-shrink-0 flex justify-center items-center rounded-full border-2 border-[#1010eb] text-[#1010eb]">
                     <IoCheckmarkOutline className="text-2xl" />
                   </div>
                   <div class="text-left">
@@ -324,8 +327,8 @@ const Home = () => {
                 </div>
 
                 <div class="flex items-start gap-4">
-                  <div class="w-10 h-10 flex justify-center items-center rounded-full border-2 border-[#1010eb] text-[#1010eb]">
-                    <IoCheckmarkOutline className="text-2xl " />
+                  <div class="w-8 h-8 flex-shrink-0 flex justify-center items-center rounded-full border-2 border-[#1010eb] text-[#1010eb]">
+                    <IoCheckmarkOutline className="text-2xl" />
                   </div>
                   <div class="text-left">
                     <p class="text-2xl font-light text-dark">WeCare app</p>
@@ -346,9 +349,9 @@ const Home = () => {
         </div>
       </section>
       {/* medtroonic apps  */}
-      <section className="h-[80vh] flex items-center justify-center bg-gray-50">
+      <section className="h-[55vh] md:h-[80vh] lg:h-[80vh] flex items-center justify-center bg-gray-50">
         <div className="max-w-6xl mx-auto text-center py-8 px-4 lg:px-16 text-dark">
-          <h3 className="my-5 text-5xl font-light leading-[4.5rem] ">
+          <h3 className="my-5 text-3xl md:text-5xl lg:text-5xl font-light lg:leading-[4.5rem] md:leading-[4.5rem] leading-[2.8rem]">
             {" "}
             Is your mobile phone compatible with Medtronic apps?
           </h3>

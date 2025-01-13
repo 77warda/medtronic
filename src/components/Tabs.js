@@ -11,6 +11,7 @@ import Tab3 from "./Tab3";
 
 export default function TabsBasicExample() {
   const [basicActive, setBasicActive] = useState("tab1");
+  const [hoveredTab, setHoveredTab] = useState(null); // Track the currently hovered tab
 
   const handleBasicClick = (value) => {
     if (value === basicActive) {
@@ -19,11 +20,19 @@ export default function TabsBasicExample() {
     setBasicActive(value);
   };
 
+  const handleMouseEnter = (id) => {
+    setHoveredTab(id);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredTab(null);
+  };
+
   return (
-    <div className=" mb-3 relative">
-      <TETabs className="px-4 lg:px-20 relative z-10">
+    <div className="py-4 mt-20 mb-36 mb-3 relative ">
+      <TETabs className="px-4 lg:px-28 relative z-10 flex-nowrap w-full overflow-x-auto py-7 overflow-y-hidden">
         {/* Static Horizontal Line */}
-        <div className="absolute bottom-[-34px] left-0 right-0 h-[4px] bg-gray-300"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-[4px] bg-gray-300"></div>
 
         {[
           { id: "tab1", label: "MiniMed™ Mobile App" },
@@ -32,25 +41,27 @@ export default function TabsBasicExample() {
         ].map((tab) => (
           <TETabsItem
             key={tab.id}
-            className={` mx-4 group relative`}
+            className="w-52 mx-4 group relative"
             onClick={() => handleBasicClick(tab.id)}
+            onMouseEnter={() => handleMouseEnter(tab.id)} // Track hover
+            onMouseLeave={handleMouseLeave} // Reset hover
             active={basicActive === tab.id}
           >
             {/* Tab Label */}
-            <span
-              className={`relative z-20 text-sm cursor-pointer ${
-                basicActive === tab.id ? "text-[#1010eb]" : "text-gray-700"
-              }`}
-            >
+            <span className="text-[#1010eb] relative z-20 text-sm cursor-pointer ">
               {tab.label}
             </span>
 
             {/* Hover/Active Underline */}
             <span
-              className={`absolute left-0 right-0 bottom-[-34px] h-[4px] bg-[#1010eb] transition-transform duration-500 ease-in-out origin-left ${
-                basicActive === tab.id
+              className={`absolute left-0 right-5 bottom-[-28px] h-[4px] bg-[#1010eb] transition-transform duration-500 ease-in-out origin-left ${
+                hoveredTab === tab.id
                   ? "scale-x-100"
-                  : "scale-x-0 group-hover:scale-x-100"
+                  : hoveredTab
+                  ? "scale-x-0"
+                  : basicActive === tab.id
+                  ? "scale-x-100"
+                  : "scale-x-0"
               }`}
             ></span>
           </TETabsItem>

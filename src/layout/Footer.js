@@ -4,6 +4,7 @@ import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 import { FaWhatsapp, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Logo from "../assets/med-images/logo.svg";
 import { FaArrowUpLong } from "react-icons/fa6";
 
 const navigation = {
@@ -30,12 +31,14 @@ const navigation = {
 function Footer() {
   return (
     <footer className="max-w-[1270px] mx-auto relative">
-      <div className="py-5 px-1 lg:px-10 md:px-10">
-        <div className="flex items-center justify-between py-7">
+      <div className="py-5 px-5 lg:px-10 md:px-10">
+        <div className="flex lg:flex-row lg:items-center flex-col items-start justify-between py-7">
           <div>
-            <h3 className="font-semibold text-2xl">Medtronic</h3>
+            <Link to="/" className="">
+              <img className="h-6 w-auto" src={Logo} alt="logo" />
+            </Link>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="my-5 lg:my-0 flex lg:flex-row lg:items-center flex-col items-start justify-between">
             {navigation["Get Help"].map((item, index) => (
               <p key={index} className="flex items-center">
                 <a
@@ -46,7 +49,7 @@ function Footer() {
                 </a>
                 {index < navigation["Get Help"].length - 1 && (
                   <span className="text-[#1010eb] mx-5">
-                    <div className="h-3 w-[1px] bg-[#1010eb]"></div>
+                    <div className="h-3 w-[1px] bg-[#1010eb] hidden lg:block "></div>
                   </span>
                 )}
               </p>
@@ -78,11 +81,11 @@ function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-300">
-          <p className="my-3 text-gray-500 text-base text-center">
+          <p className="my-3 text-gray-500 text-base text-left lg:text-center">
             For 24/7 diabetes technical product support please contact 01923
             205167
           </p>
-          <div className="my-4 mx-auto flex items-center justify-center">
+          <div className="my-4 mx-auto flex flex-wrap items-center justify-start lg:justify-center">
             {navigation["Policies"].map((item, index) => (
               <p key={index} className="flex items-center">
                 <a
@@ -92,14 +95,14 @@ function Footer() {
                   {item.name}
                 </a>
                 {index < navigation["Policies"].length - 1 && (
-                  <span className="text-gray-800 mx-5">
+                  <span className="text-gray-800 mx-3 lg:mx-5">
                     <div className="h-3 w-[1px] bg-black"></div>
                   </span>
                 )}
               </p>
             ))}
           </div>
-          <p className="my-3 text-gray-500 text-sm text-center">
+          <p className="my-3 text-gray-500 text-sm text-left lg:text-center">
             See the device manuals for detailed information regarding the
             instructions for use, indications, contraindications, warnings,
             precautions, and potential adverse events. For further information,
@@ -107,7 +110,7 @@ function Footer() {
             rights reserved Medtronic. Medtronic logo and Further, Together are
             trademarks of Medtronic.
           </p>
-          <p className="font-semibold my-3 text-gray-800 text-sm text-center">
+          <p className="font-semibold my-3 text-gray-800 text-sm text-left lg:text-center">
             Building 9, Croxley Park, Watford, Hertfordshire, WD18 8WW.
           </p>
         </div>

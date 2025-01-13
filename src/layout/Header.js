@@ -1,25 +1,19 @@
 import { useEffect, useState } from "react";
 import { Dialog } from "@headlessui/react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/24/outline";
-import { FaRegHeart } from "react-icons/fa6";
-import { BiUser } from "react-icons/bi";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-import { IoSearchOutline } from "react-icons/io5";
+import Logo from "../assets/med-images/logo.svg";
 
-const navigation = [
-  { name: "Juttis", href: "/" },
-  { name: "Sandals", href: "/" },
-  { name: "Kolhapuris", href: "/shop" },
-  { name: "PNP X Anushree Reddy", href: "/deals" },
-  { name: "Wedding Shops", href: "/" },
-  { name: "KURTA SETS", href: "/" },
-  { name: "FESTIVE BAGS", href: "/" },
-  { name: "Celebrity", href: "/" },
-];
+// const navigation = [
+//   { name: "Juttis", href: "/" },
+//   { name: "Sandals", href: "/" },
+//   { name: "Kolhapuris", href: "/shop" },
+//   { name: "PNP X Anushree Reddy", href: "/deals" },
+//   { name: "Wedding Shops", href: "/" },
+//   { name: "KURTA SETS", href: "/" },
+//   { name: "FESTIVE BAGS", href: "/" },
+//   { name: "Celebrity", href: "/" },
+// ];
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,14 +25,7 @@ function Header() {
         <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Medtronic</span>
-              {/* <img className="h-8" src={Logo} alt="logo" /> */}
-            </Link>
-            <Link
-              to="/"
-              className="w-28 px-3 font-semibold uppercase text-3xl text-black"
-            >
-              Medtronic
+              <img className="h-8" src={Logo} alt="logo" />
             </Link>
           </div>
           <div className="flex lg:hidden">
@@ -83,27 +70,8 @@ function Header() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="py-6 flex justify-start">
-                  <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-[1.1rem]">
-                    <IoSearchOutline className="text-xl" />
-                  </button>
-                  <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-1xl">
-                    <FaRegHeart className="fill-black" />
-                  </button>
-                  <Link
-                    to="/cart"
-                    className="text-sm font-semibold leading-6 text-gray-900 relative"
-                  >
-                    <button className="relative mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 ">
-                      <ShoppingCartIcon className="h-5 w-5 inline-block" />
-                      {cartItems.length > 0 && (
-                        <span className="absolute -top-1 -right-2 bg-[#432818] text-black rounded-full px-1 text-xs">
-                          {cartItems.length}
-                        </span>
-                      )}
-                    </button>
-                  </Link>
-                  <button className="mx-1.5 rounded-full h-7 w-7 flex justify-center items-center text-black hover:bg-opacity-95 border-0 text-[1.1rem]">
-                    <BiUser className="stroke-1.5" />
+                  <button className="px-5 py-3 bg-[#1010eb] mx-1.5 rounded-full flex justify-center items-center text-white hover:bg-[#0e0ec4] border-0 ">
+                    Request call back
                   </button>
                 </div>
               </div>

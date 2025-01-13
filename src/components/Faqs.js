@@ -155,18 +155,21 @@ const Faqs = () => {
   };
 
   return (
-    <section className="py-8 px-4 lg:px-16">
-      <h2 className="my-5 text-4xl font-light leading-[4.5rem]">
+    <section className="py-8 px-5 lg:px-28">
+      <h2 className="my-5 text-3xl lg:text-4xl font-light leading-[4.5rem]">
         Frequently Asked Questions
       </h2>
       {faqData.map((faq, index) => (
-        <div key={index} className="py-7 border-b border-gray-200 group">
-          <div className="py-2">
+        <div
+          key={index}
+          className="py-2 lg:py-7 border-b border-gray-200 group"
+        >
+          <div className="py-1 lg:py-2">
             <button
               className="w-full flex justify-between items-center text-left focus:outline-none"
               onClick={() => toggleAccordion(index)}
             >
-              <span className="p-1.5 ml-3 text-2xl font-light text-black">
+              <span className="p-0.5 lg:p-1.5 ml-3 text-lg md:text-2xl lg:text-2xl font-light text-black">
                 {faq.question}
               </span>
               <div className="pr-5 mt-0.5 ml-2 text-gray-800 text-lg group-hover:text-gray-800">

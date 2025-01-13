@@ -4,9 +4,9 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 export default function SomeDoubt() {
   return (
-    <div className="px-4 lg:px-20 bg-[#f5f5f5] py-8 h-60 mt-20">
+    <div className="px-4 lg:px-28 bg-[#f5f5f5] py-20 mt-20">
       <div className="grid grid-cols-12">
-        <div className="lg:col-span-6 md:col-span-6 sm:col-span-12">
+        <div className="lg:col-span-6 md:col-span-6 col-span-12">
           <h1 className="text-2xl text-blue-navy">Still have some doubts?</h1>
           <div className="flex items-start gap-4 mt-4">
             <CiCircleQuestion className="w-12 h-12 " />
@@ -25,7 +25,7 @@ export default function SomeDoubt() {
           </div>
         </div>
 
-        <div className="lg:col-span-6 md:col-span-6 sm:col-span-12">
+        <div className="lg:col-span-6 md:col-span-6 col-span-12">
           <div className="flex items-start gap-4 mt-12">
             <FiPhone className="w-10 h-10 " />
             <div>

@@ -153,7 +153,7 @@ const compatibelProducts = [
 ];
 
 const References = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const contentRef = useRef(null);
 
   const toggleAccordion = () => {
@@ -161,7 +161,7 @@ const References = () => {
   };
   return (
     <>
-      <section className="py-8 px-4 lg:px-20">
+      <section className="py-8 px-4 lg:px-28">
         <div className="py-7 border-b border-gray-200 group">
           <div className="py-2 ">
             {/* Accordion Header */}
@@ -169,7 +169,7 @@ const References = () => {
               className="w-full flex justify-between items-center text-left focus:outline-none"
               onClick={toggleAccordion}
             >
-              <h2 className="my-5 text-4xl font-light leading-[4.5rem]">
+              <h2 className="my-5 text-3xl lg:text-4xl font-light leading-[4.5rem]">
                 References
               </h2>
               <div className="pr-5 mt-0.5 ml-2 text-gray-800 text-lg group-hover:text-gray-800">

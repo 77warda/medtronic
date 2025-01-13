@@ -6,10 +6,10 @@ import medronic from "../assets/med-images/Medronic.png";
 export default function DreaMed() {
   return (
     <div>
-      <div className="flex justify-center">
-        <img src={dreaMed} alt="gluco" className="w-52 h-auto mx-8 " />
-        <img src={roche} alt="gluco" className="w-36 h-auto  mx-8" />
-        <img src={medronic} alt="gluco" className="w-36 h-auto mx-8" />
+      <div className="flex justify-center lg:gap-5 gap-2">
+        <img src={dreaMed} alt="gluco" className="lg:w-52 w-40 h-auto  " />
+        <img src={roche} alt="gluco" className="lg:w-36 w-28 h-auto  " />
+        <img src={medronic} alt="gluco" className="lg:w-36 w-28 h-auto " />
       </div>
       <div className="mx-auto max-w-6xl py-8 px-4 lg:px-28 text-center">
         <p>
