@@ -4,20 +4,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import Logo from "../assets/med-images/logo.svg";
 
-// const navigation = [
-//   { name: "Juttis", href: "/" },
-//   { name: "Sandals", href: "/" },
-//   { name: "Kolhapuris", href: "/shop" },
-//   { name: "PNP X Anushree Reddy", href: "/deals" },
-//   { name: "Wedding Shops", href: "/" },
-//   { name: "KURTA SETS", href: "/" },
-//   { name: "FESTIVE BAGS", href: "/" },
-//   { name: "Celebrity", href: "/" },
-// ];
-
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
 
   return (
     <div className="fixed top-0 w-full z-20 bg-white shadow-md px-5 py-5">
@@ -28,7 +16,7 @@ function Header() {
               <img className="h-8" src={Logo} alt="logo" />
             </Link>
           </div>
-          <div className="flex lg:hidden">
+          {/* <div className="flex lg:hidden">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -37,14 +25,14 @@ function Header() {
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          </div> */}
+          <div className="lg:flex lg:flex-1 lg:justify-end">
             <button className="px-5 py-3 bg-[#1010eb] mx-1.5 rounded-full flex justify-center items-center text-white hover:bg-[#0e0ec4] border-0 ">
               Request call back
             </button>
           </div>
         </nav>
-        <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        {/* <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <Dialog.Panel
             focus="true"
             className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden"
@@ -77,7 +65,7 @@ function Header() {
               </div>
             </div>
           </Dialog.Panel>
-        </Dialog>
+        </Dialog> */}
       </div>
     </div>
   );

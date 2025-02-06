@@ -8,6 +8,8 @@ import skyblue1 from "../assets/med-images/2.webp";
 import skyblue2 from "../assets/med-images/3.webp";
 import mobiles from "../assets/med-images/4.webp";
 import liveLife1 from "../assets/med-images/n1.webp";
+import liveLife2 from "../assets/med-images/n2.webp";
+import liveLife3 from "../assets/med-images/feel_more.jpg";
 import playstore from "../assets/med-images/playstore.png";
 import apple from "../assets/med-images/Apple-Logosu.png";
 import first from "../assets/med-images/1.webp";
@@ -147,7 +149,7 @@ const Home = () => {
               <div className="overflow-hidden">
                 <div className="opacity-1 transform transition duration-400 ease-in-out transform hover:scale-125 transition-all duration-1000 ease-in-out">
                   <img
-                    src={liveLife1}
+                    src={liveLife2}
                     alt="titleImage"
                     className="w-full h-[70vh] object-cover object-center"
                   />
@@ -171,7 +173,7 @@ const Home = () => {
               <div className="overflow-hidden">
                 <div className="opacity-1 transform transition duration-400 ease-in-out transform hover:scale-125 transition-all duration-1000 ease-in-out">
                   <img
-                    src={liveLife1}
+                    src={liveLife3}
                     alt="titleImage"
                     className="w-full h-[70vh] object-cover object-center"
                   />
