@@ -15,7 +15,7 @@ function PictureScrolling() {
             </h2>
             <div className="my-20">
               <div>
-                <img src={S1} alt="img" className="w-72 h-auto " />
+                <img src={S1} alt="img" className="w-72 h-auto  mx-auto" />
               </div>
               <div className=" flex items-center">
                 <div className="h-2 w-2 rounded-full bg-red-600"></div>
@@ -35,7 +35,7 @@ function PictureScrolling() {
             </div>
             <div className="my-20">
               <div>
-                <img src={S2} alt="img" className="w-72 h-auto my-10" />
+                <img src={S2} alt="img" className="w-72 h-auto mx-auto my-10" />
               </div>
               <div className=" flex items-center">
                 <div className="h-2 w-2 rounded-full bg-red-600"></div>

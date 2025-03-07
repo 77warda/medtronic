@@ -29,7 +29,7 @@ export default function Hero() {
       </div> */}
 
       {/* mobile section  */}
-      <div className="h-[90vh] md:h-screen lg:h-screen w-full relative flex lg:flex-row flex-col lg:items-center items-start justify-start lg:justify-center px-0 lg:px-48">
+      <div className="h-[70vh] md:h-screen lg:h-screen w-full relative flex lg:flex-row flex-col lg:items-center items-start justify-start lg:justify-center px-0 lg:px-48">
         <img
           src={bgImage} // Default image for larger screens
           alt="Devices"

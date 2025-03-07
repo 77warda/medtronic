@@ -32,7 +32,7 @@ export default function TabsBasicExample() {
     <div className="py-4 mt-20 mb-36 mb-3 relative ">
       <TETabs className="px-4 lg:px-28 relative z-10 flex-nowrap w-full overflow-x-auto py-7 overflow-y-hidden">
         {/* Static Horizontal Line */}
-        <div className="absolute bottom-0 left-0 right-0 h-[4px] bg-gray-300"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 h-[4px] bg-gray-300"></div> */}
 
         {[
           { id: "tab1", label: "MiniMed™ Mobile App" },
@@ -41,7 +41,7 @@ export default function TabsBasicExample() {
         ].map((tab) => (
           <TETabsItem
             key={tab.id}
-            className="w-52 mx-4 group relative"
+            className="border-b border-transparent w-52 mx-4 group relative"
             onClick={() => handleBasicClick(tab.id)}
             onMouseEnter={() => handleMouseEnter(tab.id)} // Track hover
             onMouseLeave={handleMouseLeave} // Reset hover
